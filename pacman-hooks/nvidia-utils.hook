@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = nvidia-utils
+
+[Action]
+Description = Running nvidia-modprobe ...
+When = PostTransaction
+Depends = nvidia-utils
+Exec = /usr/bin/bash -c "nvidia-modprobe"

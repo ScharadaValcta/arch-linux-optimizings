@@ -1,0 +1,15 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = brave-bin
+Target = google-chrome
+Target = pikaur
+Target = room-arranger
+Target = scrcpy
+Target = signal-desktop-bin
+Target = telegram-purple
+
+[Action]
+Description = Cleaning pacman Cache
+When = PostTransaction
+Exec = /usr/bin/paccache -rk3 -c /home/mertins/.cache/pikaur/pkg

@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = aic94xx-firmware
+
+[Action]
+Description = Init fsrams neu generieren ...
+When = PostTransaction
+Depends = mkinitcpio
+Exec = /usr/bin/bash -c "mkinitcpio -p linux"
